@@ -21,6 +21,7 @@ class HomeScreen extends NormalPageView<Props>{
       <View style={{flex:1,justifyContent: 'center', alignItems: 'center' }}>
          <Text>{HomeStore.user.age}</Text>
          <Button title="增加" onPress={()=>{
+           console.log(1111111)
           //  this.props.navigation.push('Details')
           HomeStore.setAge(HomeStore.user.age)
          }}></Button>
