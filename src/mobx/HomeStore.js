@@ -1,18 +1,24 @@
 import {observable, action} from "mobx";
-import axios from 'axios'
+import HomeResource from '../resource/HomeResource'
 //对象
 class demo  {
     @observable user = {
         name: '陈婷玉',
         age: 25,
     }
-    
+
     @action setAge(age) { 
-        // this.user.age = age + 1
-        axios.get('www.baidu.com').then(function(res) {
-            console.log(res)
-        }).catch(function(err) {
-            console.log(err)
+        this.user.age = age + 1
+    }
+    
+    @action login(id) {
+        let data = {
+            id: 101,
+            name:'陈婷玉',
+            age:25
+        }
+        HomeResource.register(data).then(response => {
+            console.log('请求成功', response.status)
         })
     }
 
