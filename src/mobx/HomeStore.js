@@ -18,7 +18,12 @@ class demo  {
             age:25
         }
         HomeResource.register(data).then(response => {
-            console.log('请求成功', response.status)
+            console.log('请求成功', response)
+        }).catch(err=> {
+            console.log('错误', err)
+            if (err.status == 100001) {
+            }
+            
         })
     }
 

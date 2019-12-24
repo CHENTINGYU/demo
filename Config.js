@@ -1,9 +1,9 @@
 let ConfigUrl = {
     dev: {
-        baseUrl: 'http://www.baidu.com'
+        baseUrl: 'http://www.weibo.com'
     },
     test: {
-        baseUrl: 'http://www.baidu.com'
+        baseUrl: 'http://www.weibo.com'
     }
 }
 
