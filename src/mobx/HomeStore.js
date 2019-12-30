@@ -17,10 +17,10 @@ class demo  {
             name:'陈婷玉',
             age:25
         }
-        HomeResource.register(data).then(response => {
+        HomeResource.login(data).then(response => {
             console.log('请求成功', response)
         }).catch(err=> {
-            console.log('错误', err)
+            console.log(err)
             if (err.status == 100001) {
             }
             
