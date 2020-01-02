@@ -2,8 +2,6 @@ import React from 'react'
 import {Text,Image,StyleSheet, View} from 'react-native'
 import {Button} from 'react-native-elements'
 import NormalPageView from '../component/NormalPageView'
-import {observer, inject} from 'mobx-react';
-@inject('HomeStore')
 @observer
 class HomeScreen extends NormalPageView<Props>{
   static pageConfig = {
@@ -14,14 +12,10 @@ class HomeScreen extends NormalPageView<Props>{
   }
 
   renderContent(){
-   
-    let {HomeStore} = this.props
     return(
       <View style={{flex:1,justifyContent: 'center', alignItems: 'center' }}>
-         <Text>{HomeStore.user.age}</Text>
          <Button title="增加" onPress={()=>{
           //  this.props.navigation.push('Details')
-          HomeStore.login(66)
          }}></Button>
       </View>
      
