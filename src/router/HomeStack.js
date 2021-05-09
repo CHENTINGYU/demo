@@ -6,6 +6,8 @@ import  DetailsScreen from '../page/DetailsScreen'
 import  UseScreen from '../page/UseScreen'
 
 
+
+
 const TransitionConfiguration = (transitionProps, prevTransitionProps, isModal) => ({
   screenInterpolator: StackViewStyleInterpolator.forHorizontal,
 })
@@ -13,7 +15,7 @@ const TransitionConfiguration = (transitionProps, prevTransitionProps, isModal) 
 const HomeStack = createStackNavigator({
     Home: HomeScreen,
     Details: DetailsScreen,
-    User:UseScreen
+    User:UseScreen,
   },
   {
     headerMode: 'none',

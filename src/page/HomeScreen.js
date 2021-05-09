@@ -3,7 +3,6 @@ import {Text,Image,StyleSheet, View} from 'react-native'
 import {Button} from 'react-native-elements'
 import NormalPageView from '../component/NormalPageView'
 import {observer, inject} from 'mobx-react';
-
 @inject('HomeStore')
 @observer
 class HomeScreen extends NormalPageView<Props>{
@@ -15,14 +14,14 @@ class HomeScreen extends NormalPageView<Props>{
   }
 
   renderContent(){
-    console.log('counter', this.props.HomeStore.counter)
+   
+    let {HomeStore} = this.props
     return(
       <View style={{flex:1,justifyContent: 'center', alignItems: 'center' }}>
-         <Text>{this.props.HomeStore.counter}</Text>
-         <Button title="去详情" onPress={()=>{
-           console.log(111111)
-          //  console.log('this.props.navigation', this.props.navigation.state)
-           this.props.navigation.push('Details')
+         <Text>{HomeStore.user.age}</Text>
+         <Button title="增加" onPress={()=>{
+          //  this.props.navigation.push('Details')
+          HomeStore.login(66)
          }}></Button>
       </View>
      
